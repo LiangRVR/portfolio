@@ -64,7 +64,7 @@ const Hero = () => {
         <div className="pt-5">
           <HeroButton text={"About"} href="#about" />
           <HeroButton text={"Experience"} href="#experience" />
-          <HeroButton text={"Skills"} href="#skills" />
+          <HeroButton text={"Skills"}  href="#skills" />
           <HeroButton text={"Projects"} href="#projects" />
         </div>
       </motion.div>
