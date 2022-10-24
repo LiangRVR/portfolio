@@ -35,7 +35,7 @@ const About = () => {
           duration: 1.2,
         }}
         /* w-56 h-56 */
-        className="relative md:mb-0 flex-shrink-0 w-[40vw] h-[40vw]  max-w-[14rem] max-h-56 object-cover object-top  md:w-64 md:h-96 md:max-w-[500px] md:max-h-[600px] xl:w-1/3 xl:h-2/4"
+        className="relative md:mb-0 flex-shrink-0 w-[40vw] h-[40vw]  max-w-[14rem] max-h-56 md:w-64 md:h-96 md:max-w-[500px] md:max-h-[600px] xl:w-1/3 xl:h-2/4"
       >
         <Image
           src="https://drive.google.com/uc?export=view&id=1cwfoP7npY2-fJWO4vPAO6-YsKgJjtHBZ"

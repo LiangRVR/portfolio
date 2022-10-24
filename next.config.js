@@ -8,6 +8,6 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-    domains: ["drive.google.com"],
+    domains: ["drive.google.com", "www.gartner.com", "cdn.jsdelivr.net"],
   },
 };
