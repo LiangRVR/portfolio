@@ -5,9 +5,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-scrollbar")({ nocompatible: true }),
+    require("tailwind-scrollbar-hide"),
+  ],
 };

@@ -24,7 +24,7 @@ const AddFixedFooter = ({ href, className = "", children }: GotoArrowProps) => {
     <>
       {React.cloneElement(children, { onScroll: scrollHandler })}
 
-      <div className="fixed top-full -translate-y-full z-20 p-5 w-screen left-1/2 -translate-x-1/2 flex flex-row justify-between max-w-7xl">
+      <div className="fixed top-full -translate-y-full z-20 p-1 md:p-5 w-screen left-1/2 -translate-x-1/2 flex flex-row justify-between max-w-7xl">
         <SocialIconsContainer />
         {isVisible && (
           <Link href={href}>
@@ -40,7 +40,7 @@ const AddFixedFooter = ({ href, className = "", children }: GotoArrowProps) => {
               }}
               className={
                 className +
-                "self-end w-[7vw] max-w-[40px] min-w-[20px] animate-bounce active:animate-none hover:cursor-pointer"
+                "self-end mr-1 w-[7vw] max-w-[40px] min-w-[20px] animate-bounce active:animate-none hover:cursor-pointer"
               }
             >
               <UpArrow className="fill-gray-400 hover:fill-gray-300 active:fill-gray-500 hover:scale-105" />

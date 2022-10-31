@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 
@@ -22,21 +22,23 @@ const SocialIconsContainer = () => {
     >
       <SocialIcon
         url="https://www.linkedin.com/in/liang-villarrubia/"
-        fgColor="#6daffd"
+        fgColor="#6DAFFD"
         bgColor="transparent"
+        className="hover:scale-110"
       />
       <SocialIcon
         url="https://www.linkedin.com/in/liang-villarrubia/"
         fgColor="#6daffd"
         bgColor="transparent"
+        className="hover:scale-110"
       />
       <SocialIcon
         url="https://www.linkedin.com/in/liang-villarrubia/"
         fgColor="#6daffd"
         bgColor="transparent"
+        className="hover:scale-110"
       />
     </motion.div>
   );
 };
-
 export default SocialIconsContainer;

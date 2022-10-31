@@ -56,7 +56,7 @@ const Hero = () => {
           className="relative mx-auto h-[20vw] w-[20vw] md:h-32 md:w-32 rounded-full"
         >
           <Image
-            src="https://drive.google.com/uc?export=view&id=1Hiao907mrz38xKxzndKHD8QPg4tAFtLP"
+            src="https://i.ibb.co/9V4y5qH/perfil-removebg-preview-cartoon.png"
             alt="Liang`s picture"
             objectFit="cover"
             layout="fill"

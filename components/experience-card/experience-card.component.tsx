@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { ReactElement } from "react";
 import { motion } from "framer-motion";
 import DevIcon from "../dev-icon/dev-icon.component";
 
