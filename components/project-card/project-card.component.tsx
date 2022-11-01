@@ -44,7 +44,7 @@ const ProjectCard = ({i,projects}: Props) => {
         viewport={{
           once: true,
         }}
-        className="relative w-52 h-24 sm:w-[40vh] sm:h-[18vh] 2xl:w-[55vh] 2xl:h-[25vh]"
+        className="relative w-[40vh] aspect-[45/19]"
       >
         <Image
           src="https://i.ibb.co/9t1MvM8/rsz-crwn-clothing.png"
@@ -53,7 +53,7 @@ const ProjectCard = ({i,projects}: Props) => {
         />
       </motion.div>
 
-      <div className="space-y-1 md:space-y-10 px-0 md:px-5 lg:p-10 max-w-6xl">
+      <div className="space-y-1 md:space-y-10 px-0 md:px-5 lg:px-10 max-w-6xl">
         <h4 className="text-lg md:text-xl lg:text-2xl font-semibold text-center">
           Case Study {i + 1} of {projects.length}: Crown clothing
         </h4>
