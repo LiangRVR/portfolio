@@ -14,10 +14,11 @@ const AddFixedFooter = ({ href, className = "", children }: GotoArrowProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const scrollHandler = (event: Event) => {
-    const win = event.currentTarget as HTMLElement;
-    const containerHeight = win.clientHeight;
-    const scrollTop = win.scrollTop;
-    setIsVisible(scrollTop > containerHeight);
+    const div = event.currentTarget as HTMLDivElement;
+    const divHeight = div.clientHeight;
+    const scrollTop = div.scrollTop;
+
+    setIsVisible(scrollTop > divHeight);
   };
 
   return (
