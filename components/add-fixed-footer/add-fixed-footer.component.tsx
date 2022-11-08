@@ -13,12 +13,28 @@ type GotoArrowProps = Pick<LinkProps, "href"> & {
 const AddFixedFooter = ({ href, className = "", children }: GotoArrowProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
+  const upArrowVariants = {
+    visible: {
+      opacity: 1,
+    },
+    hidden: {
+      opacity: 0,
+    },
+  };
+
   const scrollHandler = (event: Event) => {
     const div = event.currentTarget as HTMLDivElement;
     const divHeight = div.clientHeight;
     const scrollTop = div.scrollTop;
-
-    setIsVisible(scrollTop > divHeight);
+    if (isVisible) {
+      if (scrollTop < divHeight) {
+        setIsVisible(false);
+      }
+    } else {
+      if (scrollTop > divHeight) {
+        setIsVisible(true);
+      }
+    }
   };
 
   return (
@@ -30,11 +46,9 @@ const AddFixedFooter = ({ href, className = "", children }: GotoArrowProps) => {
         {isVisible && (
           <Link href={href}>
             <motion.div
-              key="upArrow"
-              initial={{
-                opacity: 0,
-              }}
-              animate={{ opacity: 1 }}
+              variants={upArrowVariants}
+              initial="hidden"
+              animate="visible"
               transition={{
                 type: "spring",
                 duration: 3,
