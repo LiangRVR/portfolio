@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
 const useWheelScroll = (elementRef: React.RefObject<HTMLDivElement>): void => {
-  //   Add wheel event listener to a ref and handle it to
-  // do a custom scroll
-
+  /**
+   * Add wheel event listener to a ref and handle it to make a custom scroll
+   */
   useEffect(() => {
     const currentDiv = elementRef.current;
     if (currentDiv) {

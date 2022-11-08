@@ -43,7 +43,7 @@ const Header = () => {
         transition={{
           duration: 1.5,
         }}
-        className="flex flex-row items-center space-x-6"
+        className="flex flex-row items-center space-x-6 pr-2 md:pr-5"
       >
         <Link href="#about">
           <p className="uppercase cursor-pointer text-sm text-gray-500 hover:text-gray-800">
