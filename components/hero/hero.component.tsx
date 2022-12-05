@@ -41,7 +41,7 @@ const Hero = () => {
         </motion.div>
       )}
       <BackgroundCircle onAnimationCompleteCallBack={handleCircleAnimationDone}>
-        <motion.div
+        <motion.picture
           initial={{
             opacity: 0,
             scale: 0,
@@ -61,8 +61,9 @@ const Hero = () => {
             objectFit="cover"
             layout="fill"
             className="rounded-full"
+            priority={true}
           />
-        </motion.div>
+        </motion.picture>
       </BackgroundCircle>
     </div>
   );
