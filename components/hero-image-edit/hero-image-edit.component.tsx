@@ -16,7 +16,7 @@ const HeroImageEdit = () => {
 
   const { register, handleSubmit, reset } = useForm<InputURLImage>({
     defaultValues: {
-      url: imageUrl,
+      url: "",
     },
   });
 
@@ -25,6 +25,7 @@ const HeroImageEdit = () => {
     if (isValidUrl(url)) {
       setImageUrl(url);
       setShow(false);
+      reset();
       return;
     }
     setShow(true);
@@ -33,20 +34,26 @@ const HeroImageEdit = () => {
   return (
     <div className="w-11/12 md:w-fit h-fit p-5  border-2 shadow-md rounded-xl mx-auto">
       <h2 className="text-2xl  text-center">Hero Image</h2>
-      <div className="space-x-8 flex flex-row justify-around content-center flex-wrap">
+      <div className="space-y-5 md:space-x-8 flex flex-col md:flex-row justify-center md:justify-around content-center flex-wrap">
         <form
           onSubmit={handleSubmit(onSubmitWord)}
-          className="flex space-x-5 h-10 my-auto"
+          className="flex flex-col space-y-3 h-fit my-auto"
         >
-          <input
-            {...register("url")}
-            className="outline-none bg-slate-300/10 w-full rounded-sm border-b px-3 py-1 border-[#242424] text-gray-600 placeholder-gray-500 transition-all focus:border-[#6daffd]/40 focus:text-[#6daffd] hover:border-[#6daffd]/40"
-            placeholder="Phrase"
-            type="url"
-          />
-          <button className="bg-[#6daffd] border-2 border-[#6daffd] px-3 py-1 rounded-md text-black font-bold md:text-lg hover:bg-[#3992ff] hover:border-[#3992ff] active:bg-slate-100">
-            Add
-          </button>
+          <div className="border rounded-lg shadow-sm w-[60vw] overflow-hidden scrollbar scrollbar-hide md:w-fit h-12 px-3 flex flex-col justify-center ">
+            <p className="text-center md:text-lg">Url: {imageUrl}</p>
+          </div>
+          <div className="flex space-x-5 h-10 my-auto">
+            <input
+              {...register("url")}
+              className="outline-none bg-slate-300/10 w-full rounded-sm border-b px-3 py-1 border-[#242424] text-gray-600 placeholder-gray-500 transition-all focus:border-[#6daffd]/40 focus:text-[#6daffd] hover:border-[#6daffd]/40"
+              placeholder="URL"
+              type="url"
+            />
+            <button className="bg-[#6daffd] border-2 border-[#6daffd] px-3 py-1 rounded-md text-black font-bold md:text-lg hover:bg-[#3992ff] hover:border-[#3992ff] active:bg-slate-100">
+              Add
+            </button>
+          </div>
+
           {show && (
             <p className="text-center text-red-600">Word already added!!</p>
           )}
