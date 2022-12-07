@@ -53,7 +53,7 @@ const Hero = () => {
           transition={{
             duration: 1.0,
           }}
-          className="relative mx-auto h-[20vw] w-[20vw] md:h-32 md:w-32 rounded-full"
+          className="relative mx-auto h-[20vw] w-[20vw] md:h-32 md:w-32 rounded-full  shadow-[rgba(199,_199,_199,_0.9)_0px_30px_90px]"
         >
           <Image
             src="https://i.ibb.co/DwFTQ7R/portrait2-new.png"
