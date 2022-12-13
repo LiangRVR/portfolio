@@ -52,7 +52,7 @@ const ImageUrlEdit = ({ imageUrl, setNewUrl, title }: ImageUrlProps) => {
               type="url"
             />
             <button className="bg-[#6daffd] border-2 border-[#6daffd] px-3 py-1 rounded-md text-black font-bold md:text-lg hover:bg-[#3992ff] hover:border-[#3992ff] active:bg-slate-100">
-              Add
+              Update
             </button>
           </div>
 

@@ -9,7 +9,7 @@ const Projects = () => {
   const horizontalScrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    ///To always load first card center
+    ///To always load first card centered
     if (horizontalScrollRef.current) {
       horizontalScrollRef.current.scrollLeft =
         horizontalScrollRef.current.scrollLeft +
